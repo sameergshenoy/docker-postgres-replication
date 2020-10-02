@@ -6,6 +6,7 @@ services:
     build: '.'
     image: 'danieldent/postgres-replication'
     restart: 'always'
+    command: ["postgres", "-c", "log_statement=all"]
     environment:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'pass'
@@ -21,6 +22,7 @@ services:
     build: '.'
     image: 'danieldent/postgres-replication'
     restart: 'always'
+    command: ["postgres", "-c", "log_statement=all"]
     environment:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'pass'
